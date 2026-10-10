@@ -27,8 +27,24 @@ export const metadata: Metadata = {
     title: "Corenelius Technologies & Construction Inc.",
     description:
       "Sewage treatment plants, infrastructure, and integrated construction, led by a licensed sanitary engineer.",
-    images: ["/media/hero-river.jpg"],
+    url: "https://www.coreneliusconstruction.com",
+    siteName: "Corenelius Technologies & Construction Inc.",
+    images: [
+      {
+        url: "/media/og.png",
+        width: 1200,
+        height: 630,
+        alt: "Corenelius Technologies and Construction, Inc.",
+      },
+    ],
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Corenelius Technologies & Construction Inc.",
+    description:
+      "Sewage treatment plants, infrastructure, and integrated construction, led by a licensed sanitary engineer.",
+    images: ["/media/og.png"],
   },
 };
 

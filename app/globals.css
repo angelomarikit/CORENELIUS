@@ -14,7 +14,7 @@
 
 @utility shell {
   margin-inline: auto;
-  width: min(1600px, calc(100% - 4rem));
+  width: min(1200px, calc(100% - 3rem));
 }
 
 html {

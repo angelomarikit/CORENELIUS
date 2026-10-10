@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@theme {
+  --color-crimson: #880c12;
+  --color-crimson-deep: #6a090e;
+  --color-orange: #bd4b08;
+  --color-ink: #292929;
+  --color-muted: #5c564f;
+  --color-line: #e6e0da;
+  --color-paper: #f5f2ef;
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-newsreader), Georgia, ui-serif, serif;
+}
+
+@utility shell {
+  margin-inline: auto;
+  width: min(1600px, calc(100% - 4rem));
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: var(--color-ink);
+}
+
+::selection {
+  background: #880c12;
+  color: #fff;
+}
+
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+:focus-visible {
+  outline: 2px solid #880c12;
+  outline-offset: 3px;
+}
+
+@keyframes drift {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: drift 36s linear infinite;
+}
+
+.marquee:hover .marquee-track,
+.marquee:focus-within .marquee-track {
+  animation-play-state: paused;
+}
+
+.progress-bar {
+  transform-origin: left center;
+  animation: grow 7.2s linear forwards;
+}
+
+.is-paused .progress-bar {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .slide-in,
+  .marquee-track,
+  .progress-bar {
+    animation: none !important;
+  }
+
+  .marquee {
+    overflow: visible;
+  }
+
+  .marquee-clone,
+  .marquee-fade {
+    display: none;
+  }
+}

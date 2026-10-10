@@ -1,0 +1,16 @@
+export const adminNav = [
+  { href: "/admin", label: "Overview" },
+  { href: "/admin/hero", label: "Hero" },
+  { href: "/admin/about", label: "Company" },
+  { href: "/admin/vision", label: "Vision & mission" },
+  { href: "/admin/organization", label: "Organization" },
+  { href: "/admin/services", label: "Services" },
+  { href: "/admin/why", label: "Why choose us" },
+  { href: "/admin/schematic", label: "Schematic" },
+  { href: "/admin/advantages", label: "Advantages" },
+  { href: "/admin/portfolio", label: "Portfolio" },
+  { href: "/admin/projects", label: "Project highlights" },
+  { href: "/admin/partners", label: "Partners" },
+  { href: "/admin/contact", label: "Contact & footer" },
+  { href: "/admin/inquiries", label: "Inquiries" },
+] as const;
